@@ -78,6 +78,103 @@ body {
   padding: 2px;
 }
 
+.about-me {
+  padding: 60px 0;
+}
+
+.about-me-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.about-me h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.about-me-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about-me-text {
+  flex: 1 1 500px;
+}
+
+.about-me-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.about-me-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-image img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 5px solid #333;
+}
+
+@media (max-width: 768px) {
+  .about-me-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-me-text {
+    flex: 1 1 200px;
+  }
+
+  .about-me h2 {
+    font-size: 2rem;
+  }
+
+  .about-me-text p {
+    font-size: 1rem;
+  }
+
+  .about-me-image img {
+    width: 200px;
+    height: 200px;
+    flex: 1;
+  }
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #000;
+}
+
+.separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.25em;
+}
+
 .cards-container {
   max-width: 90%;
   margin: auto;
@@ -86,7 +183,7 @@ body {
 .cards-heading {
   font-weight: bolder;
   font-size: larger;
-  margin-top: 200px;
+  /* margin-top: 200px; */
   text-align: center;
 }
 
@@ -103,6 +200,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 350px;
+  /* height: 550px; */
   margin: 20px;
   padding: 10px;
 }
@@ -114,6 +212,8 @@ body {
 
 .project-info {
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-title {
@@ -147,6 +247,7 @@ body {
 .github-link:hover,
 .live-link:hover {
   background-color: #d5f0c1;
+  color: red;
 }
 
 @media screen and (max-width: 600px) {
